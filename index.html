@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment PCT Website</title>
+    <meta
+      content="cybersecurity, polibatam, ctf, challenges, pct"
+      name="keywords"
+    />
+    <meta content="PCT is a well known event held by PCTeam club for many years now, it stands for Hack Initiation, which means it is made to introduce beginners to the world of cybersecurity and ethical hacking." />
+
+
+    <meta
+      property="og:image"
+      content=""
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:image:alt" content="PCT Logo" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="http://policyber.team"
+    />
+    <meta property="og:title" content="PCT Event" />
+
+    <meta
+      property="og:description"
+      content="PCT is a well known event held by PCTeam club for many years now, it stands for Hack Initiation, which means it is made to introduce beginners to the world of cybersecurity and ethical hacking."
+    />
+
+    <!-- Favicons -->
+    <link
+      href="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png"
+      rel="icon"
+    />
+    <link
+      href="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png"
+      rel="apple-touch-icon"
+    />
+
+    <link
+      href="https://github.com/FortAwesome/Font-Awesome/blob/master/web-fonts-with-css/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/LATEST-VERSION"
+    />
+
+    <title>PCT Website</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../public/styles.css" rel="stylesheet" />
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/1e7114e63e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="text-white overflow-x-hidden">
+    
+    <!-- Navbar Section -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full text-white md:bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800 z-50 fixed navbar-fixed-top">
+      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row md:px-6 lg:px-8">
+        <div class="p-4 flex flex-row items-center justify-end">
+          <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open" onclick="addBg()">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="navbar flex-col flex-grow p-4 hidden lg:flex lg:justify-center lg:flex-row">
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text  focus:outline-none focus:shadow-outline" href="#hero">Home</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#about">About</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#venue">Venue</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nagenda">Agenda</a>
+        </nav>
+      </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          if ($(".navbar").hasClass("hidden")) {
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+          }
+          // $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+
+      function addBg() {
+        if (
+            document.body.scrollTop <= 20 &&
+            document.documentElement.scrollTop <= 20
+          ) {
+            document.getElementsByClassName("navbar-fixed-top")[0].classList.add("scrolled");
+        }
+      }
+    </script>
+
+    <!-- Hero Section -->
+
+    <section id="hero" class="flex flex-col pb-40 text-center gap-y-8 relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="2000">
+
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_right_mkud7e_ojrie2.svg" class="absolute -top-10 -right-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_bottom_right_armqbz_nq6whj.svg" class="absolute bottom-0 -right-10 w-32 sm:w-44 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_left_ssmri5_retrwg.svg" class="absolute -top-12 -left-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-left-12 xl:w-56 xl:-left-16 h-auto  rotate" alt="">
+
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png" alt="PCT logo" class="hero-logo w-8 mt-16 md:mt-20 md:w-14 self-center" >
+      <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper text-center">
+        <h1 class="title-gradient font-gilroy-heavy text-3xl md:text-6xl typing-demo-event text-center mx-auto">The Annual PCT Event</h1>
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-y-6 gap-x-12 mx-auto">
+        <!-- md:grid-cols-2 -->
+        <div class="inline-flex items-center">
+          <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/schedule_bom3ob_estlr9.svg" alt="schedule">
+          <p class="text-xl text-white ml-4">24 September - 15 October 2022.</p>
+        </div>
+        <div class="inline-flex items-center">
+          <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/localisation_pqybmj_bvk5k1.svg" alt="localisation" class="inline">
+          <p class="text-xl text-white ml-4">Tower A, Politeknik Negeri Batam.</p>
+        </div>
+      </div>
+      <p class="text-white text-2xl md:text-3xl font-gilroy-medium capitalize">Starting in :</p>
+      <!-- Countdown -->
+    <div class="countdown-about w-full h-full title-gradient font-gilroy-heavy">
+      <div class="countdown flex flex-row justify-center mb-4 lg:mb-8">
+        <div class="daysC flex flex-col justify-center align-center text-center">
+          <p class="daysTXT mb-3.5 lg:text-5xl text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Days</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-3 md:mx-8"> - </p>
+        </div>
+        <div class="hoursC flex flex-col justify-center align-center text-center">
+          <p class="hoursTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Hours</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-2 md:mx-8"> - </p>
+        </div>
+        <div class="minutesC flex flex-col justify-center align-center text-center">
+          <p class="minutesTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-xl">Minutes</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-1 md:mx-6"> - </p>
+        </div>
+        <div class="secondsC flex flex-col justify-center align-center text-center">
+          <p class="secondsTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Seconds</p>
+        </div>
+      </div>
+    </div>
+    <a href="http://ctf.policyber.team" target="_blank" class="text-black px-6 py-3 w-1/5 self-center font-gilroy-bold text-lg md:text-xl lg:text-2xl rounded-full bg-gradient-to-r from-[#74E250] to-[#24ECCA]">
+      Register now
+    </a>
+  </div>
+  <!-- END COUNTDOWN -->
+
+    </section>
+
+    <!-- Scrool top button -->
+    <button class="fixed w-12 h-12 bottom-32 right-10 bg-[#000f23] fill-white ease-out hover:bg-white hover:fill-[#02121F] hover:ease-out px-3 py-3 rounded-full cursor-pointer z-50" onclick="topFunction()" id="myBtn" title="Go to top">
+      <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><title/><path d="M82.6074,62.1072,52.6057,26.1052a6.2028,6.2028,0,0,0-9.2114,0L13.3926,62.1072a5.999,5.999,0,1,0,9.2114,7.6879L48,39.3246,73.396,69.7951a5.999,5.999,0,1,0,9.2114-7.6879Z"/></svg>
+    </button> 
+
+    <script>
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+
+
+    <!-- Who are we section -->
+    <section id="about" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_left_ssmri5_retrwg.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-2">&nbsp;Who are we?</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Polibatam Cyber Team
+        </h2>
+      </div>
+
+      <div class="grid gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-3 mx-auto">
+        <div class="mx-20 text-center md:text-left md:mx-0 md:w-[34rem] lg:w-[36rem] md:col-span-2">
+          PCT or Polibatam Cyber Team is a team from the Cyber Security Engineering study program at the Batam State Polytechnic which is engaged in cyber security.
+        </div>
+        <div class="mx-auto md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
+          <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png" alt="PCT logo" class="hero-logo w-16 md:w-28 self-center mx-auto" >
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- About the event section -->
+    <section class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/2_cpkgnn_bp7h3z.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-3">&nbsp;About the event</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Recruitment PCT 
+        </h2>
+      </div>
+
+      <div class="grid gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-3 mx-auto">
+        <div class="mx-20 text-center md:order-2 md:text-left md:mx-0 md:w-[34rem] lg:w-[36rem] md:col-span-2">
+          PCT or  <span class="title-gradient font-bold">Polibatam Cyber Team</span> is a team from the Cyber Security Engineering study program at the Batam State Polytechnic which is engaged in cyber security.
+          <br><br>
+          This edition will take almost a month, there will be many activities that will help you start your first steps into the InfoSec field
+          <br><br>
+          The CTF will be up all along the event period and <span class="title-gradient font-bold">challenge based</span>, i.e. the CTF is separated into small tasks that can be solved individually. We are trying our best to give all participants a delightful experience. The topics covered are somewhere around crypto, web security, reverse engineering, OSINT, Misc, and binary exploitation.
+          <br><br>
+          In addition, PCT will also hold a computer security workshop that is closely related to the CTF competition.
+        
+        </div>
+        <div class="mx-auto md:order-1 md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
+          <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png" alt="PCT logo" class="hero-logo w-28 md:w-36 self-center mx-auto my-auto" >
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+     <!-- CTF section -->
+     <section id="ctf" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_right_mkud7e_ojrie2.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-4">&nbsp;What is a CTF?</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          CAPTURE THE FLAG
+        </h2>
+      </div>
+
+        <div  class="mx-20 md:mx-40 text-center">
+          Capture the Flag in computer security is generally an exercise or as known as <span class="title-gradient font-bold">a challenge</span>, in which <span class="title-gradient font-bold">flags</span> are secretly hidden in purposefully-vulnerable programs or websites, to reach the maximum points and be ranked the highest on the scoreboard.
+          <br><br>
+          On the other hand, A CTF competition is a set of challenges of different categories. The teams will work together to try and solve as many challenges as they can against time. Each captured flag gains them a number of points.
+          <br><br>
+          Competitors steal flags either from other competitors or in our case from the organisers, PCT will present several variations, including misc, forensics and pwn. . .
+        </div>
+    </section>
+    <!-- End -->
+
+    <!-- Why participating section -->
+  <section id="whyparticipating" class="mb-32 py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-up"
+  data-aos-duration="500"
+  data-aos-easing="ease-in-sine">
+    <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_left_ssmri5_retrwg.svg" class="absolute -right-16 bottom-0 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
+    <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+        { <span class="typing-demo-5">&nbsp;Reasons to participate in PCT</span> }
+      </h3>
+      <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+        Why Participating ?
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-[#000] px-8 sm:px-40 md:px-12 xl:px-20">
+
+      <div class="relative flex flex-col items-center justify-left bg-[#5CE593] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+      data-aos="fade-up"
+      data-aos-offset="100"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine">
+            <div class="relative w-full flex items-center justify-end  mb-3">
+                <h2 class="right-3 text-5xl opacity-30 text-[#000] font-bold w-fit   ">01</h2>
+            </div>
+            <div class="w-full">
+                <h2 class="text-xl md:text-2xl">Learning </h2>
+                <h1 class="w-1/3 border-b-2 border-[#000] mt-2 mb-3"></h1>
+                <p class="text-md md:text-lg">
+                  The key benefits of participating will be the great learning experience. You will surely get to learn pretty much new skills. So if you are a curious soul wanting to learn more about being a hacker, you should definitely join us.
+                </p>
+            </div>
+            <div>
+        </div>
+     </div>
+
+     <div class="text-[#fff] relative  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+      >
+         <div class="absolute -left-1 ">
+         <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681181/brightLine_gzviov_e3vo3k.png" alt="" class="shadow-lg shadow-[#5CE593]">
+        </div>
+        <div class="relative w-full flex items-center justify-end  mb-3">
+            <h2 class="right-3 text-5xl opacity-30 text-[#fff] font-bold w-fit   ">02</h2>
+        </div>
+        <div class="w-full">
+            <h2 class="text-xl md:text-2xl">Recognition</h2>
+            <h1 class="w-1/3 border-b-2 border-[#fff] mt-2 mb-3"></h1>
+            <p class="text-md md:text-lg">
+              <span class="title-gradient">PCT</span> will give you the chance to meet other like-minded individuals and fellow cyber security enthusiasts, it is the opportunity to talk about interesting topics, get inspiration and develop a strong professional network.
+            </p>
+        </div>
+        <div>
+
+        </div>
+
+  </div>
+
+    <div class="shadow-card relative text-[#fff]  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+    data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
+    <div class="absolute -left-1 shadow-lg shadow-[#5CE593] ">
+        <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681181/brightLine_gzviov_e3vo3k.png" alt="" class="shadow-lg shadow-[#5CE593]">
+      </div>
+    <div class="relative w-full flex items-center justify-end  mb-3">
+        <h2 class="right-3 text-5xl opacity-30 text-[#fff] font-bold w-fit   ">03</h2>
+    </div>
+    <div class="w-full">
+        <h2 class="text-xl md:text-2xl">Motivation </h2>
+        <h1 class="w-1/3 border-b-2 border-[#fff] mt-2 mb-3"></h1>
+        <p class="text-md md:text-lg">
+          It’s fun, if you enjoy challenges and competitions, PCT is the place for you! You will meet other talented souls and compete with and against each other to solve the exciting challenges PCT has in store for you.
+
+        </p>
+    </div>
+    <div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+  </section>
+  <!-- End -->
+
+    <!-- Venue Section -->
+
+    <section id="venue" class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_bottom_right_armqbz_nq6whj.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-28 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-8">&nbsp;Get Direction</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          EVENT VENUE
+        </h2>
+      </div>
+
+      <div class="w-[80%] mx-auto leading-loose">
+        <!-- Two columns -->
+        <div class=" flex flex-wrap md:flex-nowrap mb-6 gap-1 p-0 md:text-3xl md:leading-10 text-xl leading-6">
+            <div class="z-0 overflow-hidden relative h-[80vw] w-[100%] md:h-auto md:w-1/2 bg-gray-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0580266914862!2d104.04539875080751!3d1.1185583625813171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d989a71199d92d%3A0x23efd5fc785fd9dd!2sTower%20A%20Politeknik%20Negeri%20Batam!5e0!3m2!1sen!2sid!4v1663697263647!5m2!1sen!2sid" class="left-0 top-0 h-[100%] w-[100%] absolute" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="md:w-1/2 py-8 md:px-8 flex flex-col justify-center">
+                <p class="pb-5 font-bold text-1xl mb-4 sm:text-2xl sm:mb-6 md:text-3xl md:mb-8">
+                  Tower A, Politeknik Negeri Batam
+                </p>
+                <p class="text-white font-light text-md sm:text-lg md:text-xl lg:text-2xl">
+                   Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End -->
+
+
+    <!-- Content section -->
+    <section id="content" class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/hero_top_right_mkud7e_ojrie2.svg" class="absolute -right-16 top-8 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-28 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-11">&nbsp;Event's Content</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+            CONTENT
+        </h2>
+      </div>
+      <div class="flex flex-wrap mx-auto gap-x-16">
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+04</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Workshops</p>
+            </div>
+        </div>
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+07</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Mentors</p>
+            </div>
+        </div>
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+25</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Challenges</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+    
+    <!-- Agenda section -->
+    <section id="nagenda" class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+      <img
+        src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681058/2_cpkgnn_bp7h3z.svg"
+        class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto rotate"
+        alt=""
+      />
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-9">&nbsp;Event timeline</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Agenda
+        </h2>
+      </div>
+      <div
+        id="agenda"
+        class="flex flex-col w-4/5 xl:w-3/5 mx-auto gap-y-8 relative"
+      >
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 01
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 26th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>17:00 : Check-in</div>
+            <div>18:30 : Opening ceremony</div>
+            <div>19:30 : CTF Start</div>
+            <div>21:00 : Dinner</div>
+          </div>
+        </div>
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 02
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 27th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>07:30 : Breakfast</div>
+            <div>09:00 - 10:30 : Digital forensics</div>
+            <div>11:00 - 12:30 : Docker security</div>
+            <div>12:30 : Lunch break</div>
+            <div>14:30 - 16:30 : Cryptographic Vulnerabilities</div>
+            <div>16:00 : Coffee Break</div>
+            <div>16:30 - 18:00 : Intro to Binary Exploitation</div>
+            <div>21:00 : Dinner</div>
+          </div>
+        </div>
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 03
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 28th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>07:30 : CTF end, Breakfast</div>
+            <div>08:30 : Closing ceremony</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Reviews section -->
+
+    <!-- End -->
+
+    <!-- Registration -->
+    
+    <!-- End -->
+
+
+ <!-- SECTION FOOTER -->
+<div class="text-center lg:text-left relative  w-full bg-[#000711] flex flex-col  text-[#fff] items-center justify-between py-5 px-24"
+data-aos="fade-bottom"
+data-aos-duration="2000"
+data-aos-easing="ease-in-sine"
+>
+    <h1 class="absolute w-full h-[calc(3px)] -top-1 bg-gradient-to-br from-[#74E250] to-[#24ECCA] mb-3"></h1>
+  <div class="w-full flex lg:flex-row flex-col items-center justify-between mb-10">
+       <div class="flex  flex-col lg:items-start items-center lg:justify-between justify-center lg:w-1/3 mb-5">
+            <p class="my-2 ">Polibatam Cyber Team</p>
+            <p class="my-2 ">Tower A <br class="lg:relative hidden"/>LT 11.4</p>
+            <p  class=" my-2 text-xl flex items-center justify-center lg:justify-left self-center lg:self-start"> <img src="./public/assets//email.png" alt="" class="mr-3"> <span><a href="mailto:polibatampcteam@gmail.com">polibatampcteam@gmail.com</a></span></p>
+       </div>
+       <div class=" flex lg:flex-row flex-col items-center justify-center lg:w-1/3">
+           <div class="lg:mr-8 mb-5 lg:mb-auto">
+               <img src="https://res.cloudinary.com/dmgzbbio9/image/upload/v1663681109/pctlogo_oicsen.png" alt="" class="w-12 md:w-20">
+           </div>
+           <div class="flex flex-col items-center justify-center ">
+               <div class="flex  items-left justify-between">
+                   <a href="https://twitter.com/" target="_blank"><img src="./public/./assets//twitter.png" alt=""  class="mx-5 cursor-pointer ">
+                   </a>
+                   <a href="https://web.facebook.com/?" target="_blank"><img src="./public/./assets//facebook.png" alt="" class="mx-5  cursor-pointer">
+                   </a>
+                   <a href="https://www.instagram.com/pcteam.polibatam/" target="_blank"><img src="./public/./assets//insta.png" alt="" class="mx-5 cursor-pointer ">
+                   </a>
+                   <a href="https://www.linkedin.com/company/" target="_blank"><img src="./public/./assets//linkedin.png" alt="" class="ml-5 cursor-pointer ">
+                   </a>
+                        </div>
+               <div>
+                   <h2 class="text-[#74E250]  text-xl relative top-6 ">@pcteam.polibatam</h2>
+               </div>
+           </div>
+
+       </div>
+  </div>
+  <div class="footerCopyright">
+      <p class="text-[#fff]">© Copyright <span class="text-[#fff]">PCTeam.</span> All Rights Reserved</p>
+  </div>
+</div>
+
+
+    <script src="/scripts/gallery.js"></script>
+    <script src="/scripts/reviews.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- End of Previous editions section -->
+    <!-- <script src="/scripts/contactform.js"></script> -->
+    <script src="/scripts/Countdown.js"></script>
+    <script src="/scripts/waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js"></script>
+  </body>
+</html>
