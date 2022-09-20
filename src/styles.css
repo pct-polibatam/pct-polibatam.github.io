@@ -1,0 +1,390 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("/public/Gilroy/Gilroy-Black.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/public/Gilroy/Gilroy-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("/public/Gilroy/Gilroy-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("/public/Gilroy/Gilroy-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/public/Gilroy/Gilroy-Light.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/public/Gilroy/Gilroy-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/public/Gilroy/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("/public/Gilroy/Gilroy-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Thin";
+  src: url("/public/Gilroy/Gilroy-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-UltraLight";
+  src: url("/public/Gilroy/Gilroy-UltraLight.ttf");
+}
+
+body,
+footer {
+  font-family: 'Gilroy-Regular', sans-serif;
+  background: #000711;
+}
+.previous-title,
+.contact-us-title {
+  font-family: "Anton", sans-serif;
+}
+
+/*GLOBAL VARIABLES*/
+:root {
+  --background_color: #100031;
+  --mobile-nav-color: rgb(37, 33, 65);
+}
+
+.font-gilroy-heavy {
+  font-family: 'Gilroy-Heavy', sans-serif;
+}
+
+.font-gilroy-bold {
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.font-gilroy-medium {
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.font-gilroy-regular {
+  font-family: 'Gilroy-Regular', sans-serif;
+}
+
+.font-gilroy-light {
+  font-family: 'Gilroy-Light', sans-serif;
+}
+
+.font-urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+
+/*FIN*/
+
+/*navbar*/
+
+.navbar-fixed-top.scrolled {
+  background-color: #000711 !important;
+  border-bottom: 1px solid #fff;
+  transition: background-color 500ms ease;
+}
+
+.mobile-nav {
+  top: 0;
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  left: 100%;
+  z-index: 15;
+  padding-top: 100px;
+  display: block;
+  background-color: var(--mobile-nav-color);
+  -webkit-transition: left 0.4s linear;
+  transition: left 0.4s linear;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+.hamburger {
+  margin: 3% 5%;
+  position: relative;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  height: 35px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active:after {
+  -webkit-transform: rotate(45deg) translate(-9px, -8px);
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.title-gradient {
+  background: linear-gradient(to right, #74e250, #24ecca);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box {
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1px; /* control the border thickness */
+  background: linear-gradient(to right, #74e250, #24ecca);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Gallery styles */
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-320px * 5));
+    transform: translateX(calc(-320px * 5));
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-320px * 5));
+    transform: translateX(calc(-320px * 5));
+  }
+}
+.slider {
+  background: pr;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(320px * 10);
+}
+.slider .slide {
+  height: 200px;
+  width: 320px;
+}
+
+/* Gallery styles end */
+
+/* Agenda styles */
+.grad {
+  padding-left: 1rem;
+  color: white;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #74E250, 
+      #24ECCA
+    ) 1 100%;
+}
+/* Agenda styles end */
+
+/* Cards Styles */
+.shadow-card {
+  box-shadow: 20px 20px 0px #5CE593;
+
+}
+
+
+/* Card Styles end */
+
+/* Animation */
+
+/* Rotation */
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Typewritter */
+.wrapper {
+  /*This part is important for centering*/
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 0.6fr));
+  place-items: center;
+}
+
+.typing-demo-event {
+  width: 23ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-1 {
+  width: 12.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-2 {
+  width: 11.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-3 {
+  width: 13ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-4 {
+  width: 12.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-5 {
+  width: 25ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-6 {
+  width: 23ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-7 {
+  width: 22ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-8 {
+  width: 11ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-9 {
+  width: 11ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-10 {
+  width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-11 {
+  width: 13ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
