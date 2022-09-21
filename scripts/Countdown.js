@@ -34,7 +34,7 @@ jQuery(document).ready(function( $ ) {
   /*------------------
         CountDown
     --------------------*/
-    var countDownDate = new Date("may 26, 2022 17:00:00").getTime();
+    var countDownDate = new Date("september 24, 2022 10:00:00").getTime();
 
   var x = setInterval(function() {
 
